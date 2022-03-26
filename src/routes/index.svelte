@@ -33,7 +33,7 @@
         }
       }`
 
-    productsPromise = query<{ product: Product }>(_query, {
+    productsPromise = query<{ products: Product[] }>(_query, {
       fetchPolicy: "no-cache",
     })
   }
