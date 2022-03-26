@@ -5,5 +5,5 @@ node_modules
 /package
 .env
 .env.*
-!.env.example
+!.env.sample
 .shopify-cli.yml
