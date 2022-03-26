@@ -1,8 +1,8 @@
-import { getOfflineToken } from "$lib/database/models/OfflineSession"
 import { getShopByName } from "$lib/database/models/Shop"
 import type { RequestEvent } from "@sveltejs/kit/types/private"
 import { AccessMode, Shopify } from "sveltekit-shopify-api"
 import { createHandler } from "sveltekit-shopify-auth"
+import { getOfflineToken } from "../database/models/OfflineSession"
 import { config } from "./config"
 import { verify } from "./verify"
 
@@ -40,6 +40,12 @@ export async function handleShopifyAuth (event: RequestEvent) {
 
   if (event.url.pathname === "/graphql") {
     return Shopify.Utils.graphqlProxy(config, event)
+  }
+
+  if (event.url.pathname === "/refresh-shopify-token") {
+    // Reauthenticate app if the online token is not valid
+    const response = await verify(config, event)
+    return response || new Response("ok")
   }
 
   // if there is a hmac, validate it. Otherwise, validate the bearer token
