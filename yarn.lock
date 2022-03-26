@@ -1130,12 +1130,29 @@ sveltekit-shopify-api@^1.1.0:
     tslib "^2.0.3"
     uuid "^8.3.1"
 
-sveltekit-shopify-auth@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/sveltekit-shopify-auth/-/sveltekit-shopify-auth-1.1.0.tgz#94388c4c0783c9f81c536a5119c869fe651ea2a0"
-  integrity sha512-rtohfNBlzW0oYKNLLjzR+Lwc+HFh3YYW61IjTnHDwujiRFJhKwKS88zkM0tqAysA9hltDXlU49F5ecdHDdNNdQ==
+sveltekit-shopify-api@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/sveltekit-shopify-api/-/sveltekit-shopify-api-1.2.0.tgz#16779dc0f308b27c4c40b78e88e42eb954b917b2"
+  integrity sha512-F7CtythJGZg/V/GIwj5o7LplHR6W6LYPoM1D6zIooeZDkxnxNAKa6GMj6sg6xFFVye/NxLNQC1cHDAIAR3t+Jw==
+  dependencies:
+    "@shopify/network" "^1.5.1"
+    "@types/jsonwebtoken" "^8.5.0"
+    "@types/node-fetch" "^2.5.7"
+    "@types/supertest" "^2.0.10"
+    cookie "^0.4.2"
+    cookies "^0.8.0"
+    jsonwebtoken "^8.5.1"
+    node-fetch "^2.6.1"
+    tslib "^2.0.3"
+    uuid "^8.3.1"
+
+sveltekit-shopify-auth@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/sveltekit-shopify-auth/-/sveltekit-shopify-auth-1.2.0.tgz#890894cecbc9ea34992e3ffc8b363eccd850a94c"
+  integrity sha512-O6HwngcC4LOW8H5ZzbES3LorsmZZp3/1vcsCURmBB8yC0RLmgl+GgnuG77kWa7D4h63tMoTwOcKFA9QaVlRa5g==
   dependencies:
     cookie "^0.4.2"
+    sveltekit-shopify-api "^1.1.0"
 
 symbol-observable@^4.0.0:
   version "4.0.0"
