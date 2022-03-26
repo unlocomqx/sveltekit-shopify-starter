@@ -17,5 +17,5 @@
 {#if redirect}
   Redirecting...
 {:else}
-  Congrats! Your app works 🎉
+  <slot></slot>
 {/if}
