@@ -39,52 +39,98 @@
   }
 </script>
 
-<p>Congrats! Your app works 🎉</p>
+<svelte:head>
+  <title>Home</title>
+</svelte:head>
 
-<ul>
-  <li>The current shop is <strong>{shop.name}</strong></li>
-  <li>
-    The app scopes are
-    <ul>
-      {#each shop.scope.split(",") as scope}
-        <li>{scope}</li>
-      {/each}
-    </ul>
-  </li>
-</ul>
+<section>
+  <h1>
+    <div class="welcome">
+      <picture>
+        <source srcset="svelte-welcome.webp" type="image/webp"/>
+        <img src="svelte-welcome.png" alt="Welcome"/>
+      </picture>
+    </div>
 
-<p>
-  <button on:click={getMoreInfos}>Get more infos (using authenticated fetch)</button>
-  <button on:click={getProducts}>Get products (using GraphQL)</button>
-</p>
+    to your new<br/>SvelteKit app
+  </h1>
 
-{#if infosPromise}
-  {#await infosPromise}
-    Fetching infos...
-  {:then {session, shop}}
-    <!-- ⚠️ For demo purposes only -->
-    <p>
-      The session will expire in ⏳ {session.expires} seconds
-    </p>
+  <p>Congrats! Your app works 🎉</p>
 
-    <p>
-      The app was first installed at ⏰ {new Date(shop.createdAt)}
-    </p>
-  {/await}
-{/if}
-
-{#if productsPromise}
-  {#await productsPromise}
-    Fetching products...
-  {:then {products}}
-    <ul>
-      {#if products.edges.length}
-        {#each products.edges as {node: product}}
-          <li>{product.title}</li>
+  <ul>
+    <li>The current shop is <strong>{shop.name}</strong></li>
+    <li>
+      The app scopes are
+      <ul>
+        {#each shop.scope.split(",") as scope}
+          <li>{scope}</li>
         {/each}
-      {:else}
-        There are no products yet
-      {/if}
-    </ul>
-  {/await}
-{/if}
+      </ul>
+    </li>
+  </ul>
+
+  <p>
+    <button on:click={getMoreInfos}>Get more infos (using authenticated fetch)</button>
+    <button on:click={getProducts}>Get products (using GraphQL)</button>
+  </p>
+
+  {#if infosPromise}
+    {#await infosPromise}
+      Fetching infos...
+    {:then {session, shop}}
+      <!-- ⚠️ For demo purposes only -->
+      <p>
+        The session will expire in ⏳ {session.expires} seconds
+      </p>
+
+      <p>
+        The app was first installed at ⏰ {new Date(shop.createdAt)}
+      </p>
+    {/await}
+  {/if}
+
+  {#if productsPromise}
+    {#await productsPromise}
+      Fetching products...
+    {:then {products}}
+      <ul>
+        {#if products.edges.length}
+          {#each products.edges as {node: product}}
+            <li>{product.title}</li>
+          {/each}
+        {:else}
+          There are no products yet
+        {/if}
+      </ul>
+    {/await}
+  {/if}
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  h1 {
+    width: 100%;
+  }
+
+  .welcome {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding: 0 0 calc(100% * 495 / 2048) 0;
+  }
+
+  .welcome img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: block;
+  }
+</style>

@@ -20,6 +20,11 @@
     tslib "^2.3.0"
     zen-observable-ts "^1.2.0"
 
+"@fontsource/fira-mono@^4.5.6":
+  version "4.5.6"
+  resolved "https://registry.yarnpkg.com/@fontsource/fira-mono/-/fira-mono-4.5.6.tgz#719b9c55fba655a4189477150fd5d89fac012ec3"
+  integrity sha512-sEt0MoN25QabXfq4xrtOyHQT257hNkJwR2Z10Y3xH9dEqH6Zlr9id7biiI+nwX1nnhgaywpnc7UH1cv/8t0VLA==
+
 "@graphql-typed-document-node/core@^3.0.0":
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/@graphql-typed-document-node/core/-/core-3.1.1.tgz#076d78ce99822258cf813ecc1e7fa460fa74d052"
