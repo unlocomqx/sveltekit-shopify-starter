@@ -31,6 +31,13 @@ yarn
 cp .env.sample .env
 ```
 
+- Initialize the DB
+
+```shell
+prisma db push
+prisma generate
+```
+
 - Run it
 
 ```shell
