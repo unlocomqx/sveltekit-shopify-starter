@@ -17,10 +17,7 @@ export function authenticatedFetch (fetchFn = fetch): (uri: RequestInfo, options
   const fetchFunction = shopifyFetch(app, fetchFn)
 
   return async (uri, options) => {
-    console.log(uri)
     const response = await fetchFunction(uri, options)
-    console.log(response)
-    console.log(response.headers.get("X-Shopify-API-Request-Failure-Reauthorize"))
     if (response.headers.get("X-Shopify-API-Request-Failure-Reauthorize") === "1") {
       const authUrl = response.headers.get("X-Shopify-API-Request-Failure-Reauthorize-Url")
       if (window.top === window.self) {

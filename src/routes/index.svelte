@@ -15,6 +15,11 @@
     sessionInfo = session
     shopInfo = shop
   }
+
+  let promise
+  function handleClick () {
+    promise = getInfo()
+  }
 </script>
 
 <p>Congrats! Your app works 🎉</p>
@@ -32,18 +37,20 @@
 </ul>
 
 <p>
-  <button on:click={getInfo}>Get more info</button>
+  <button on:click={handleClick}>Get more info</button>
 </p>
 
-<!-- ⚠️ For demo purposes only -->
-{#if sessionInfo}
-  <p>
-    The session will expire in {sessionInfo.expires} seconds
-  </p>
-{/if}
+{#if promise}
+  {#await promise}
+    Fetching info...
+  {:then _}
+    <!-- ⚠️ For demo purposes only -->
+    <p>
+      The session will expire in ⏳ {sessionInfo.expires} seconds
+    </p>
 
-{#if shopInfo}
-  <p>
-    The app was first installed at {new Date(shopInfo.createdAt)}
-  </p>
+    <p>
+      The app was first installed at ⏰ {new Date(shopInfo.createdAt)}
+    </p>
+  {/await}
 {/if}
