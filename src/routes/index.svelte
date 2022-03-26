@@ -78,9 +78,13 @@
     Fetching products...
   {:then {products}}
     <ul>
-      {#each products.edges as {node: product}}
-        <li>{product.title}</li>
-      {/each}
+      {#if products.edges.length}
+        {#each products.edges as {node: product}}
+          <li>{product.title}</li>
+        {/each}
+      {:else}
+        There are no products yet
+      {/if}
     </ul>
   {/await}
 {/if}
