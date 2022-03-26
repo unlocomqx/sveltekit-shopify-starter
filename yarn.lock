@@ -53,6 +53,20 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
+"@shopify/app-bridge-utils@^2.0.21":
+  version "2.0.21"
+  resolved "https://registry.yarnpkg.com/@shopify/app-bridge-utils/-/app-bridge-utils-2.0.21.tgz#b4d4d6b663e4ecba6b7a546c351b8d58e24247be"
+  integrity sha512-sInEoMmYXywSrXf8b3TowfGa4hh9ewkQtMA1TesVWxyDUnjBoOUli6synxzW+56V0H0xtCgc9tQCgwAHPoYMQg==
+  dependencies:
+    "@shopify/app-bridge" "^2.0.21"
+
+"@shopify/app-bridge@^2.0.21":
+  version "2.0.21"
+  resolved "https://registry.yarnpkg.com/@shopify/app-bridge/-/app-bridge-2.0.21.tgz#4fcd5bc85ab10ffc189889ba338acfaa329e34e7"
+  integrity sha512-X7GpBcMKic+9/j9nAadALqSStVSs9aoKBG0/jyYEQlcY4HwUQLJC5SrXubWQMskRQ19F8Oz2o2VcQT/zjTKJqg==
+  dependencies:
+    base64url "^3.0.1"
+
 "@shopify/network@^1.5.1":
   version "1.6.4"
   resolved "https://registry.yarnpkg.com/@shopify/network/-/network-1.6.4.tgz#fdfa8379cb6e06f05ee63d24aafcd6f8e275cb34"
@@ -179,6 +193,11 @@ balanced-match@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
+
+base64url@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/base64url/-/base64url-3.0.1.tgz#6399d572e2bc3f90a9a8b22d5dbb0a32d33f788d"
+  integrity sha512-ir1UPr3dkwexU7FdV8qBBbNDRUhMmIekYMFZfi+C/sLNnRESKPl23nB9b2pltqfOQNnGzsDdId90AEtG5tCx4A==
 
 binary-extensions@^2.0.0:
   version "2.2.0"
@@ -940,10 +959,10 @@ svelte@^3.44.0:
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.46.4.tgz#0c46bc4a3e20a2617a1b7dc43a722f9d6c084a38"
   integrity sha512-qKJzw6DpA33CIa+C/rGp4AUdSfii0DOTCzj/2YpSKKayw5WGSS624Et9L1nU1k2OVRS9vaENQXp2CVZNU+xvIg==
 
-sveltekit-shopify-api@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/sveltekit-shopify-api/-/sveltekit-shopify-api-1.0.0.tgz#971b1b1a4cff76555e454e88648e5fbbe0bd8e4e"
-  integrity sha512-sYyz38rHaet8vXDlMvE2E3ZJf5K5Wz84+i65sYMORv5oD9bo5NFi82AYbC8gku5vMWGL6U32j6rZVsqAD021pA==
+sveltekit-shopify-api@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/sveltekit-shopify-api/-/sveltekit-shopify-api-1.1.0.tgz#05c8873fc1106d81c242f4b866286575b4dad666"
+  integrity sha512-QclubMIGTS8TRrF6ZRejOI6r5clhQN1NaOcFJWjouketuLtwALZz+kKPlrU/iJAUS0DNmGsJyqb/act3woEwOg==
   dependencies:
     "@shopify/network" "^1.5.1"
     "@types/jsonwebtoken" "^8.5.0"

@@ -1,4 +1,4 @@
-import { prisma } from "$lib/prisma/client"
+import { prisma } from "$lib/database/client"
 import type { Shop } from "@prisma/client"
 
 export async function getShopById(id: string): Promise<Shop> {

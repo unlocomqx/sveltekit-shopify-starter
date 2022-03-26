@@ -22,8 +22,10 @@
   "type": "module",
   "dependencies": {
     "@prisma/client": "^3.11.1",
+    "@shopify/app-bridge": "^2.0.21",
+    "@shopify/app-bridge-utils": "^2.0.21",
     "prisma": "^3.11.1",
-    "sveltekit-shopify-api": "^1.0.0",
+    "sveltekit-shopify-api": "^1.1.0",
     "sveltekit-shopify-auth": "^1.1.0"
   }
 }

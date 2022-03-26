@@ -1,7 +1,7 @@
 import { prisma } from "$lib/database/client"
 import type { RequestEvent } from "@sveltejs/kit/types/private"
 import type { AuthConfig } from "sveltekit-shopify-api"
-import loadCurrentSession from "sveltekit-shopify-api/dist/utils/load-current-session"
+import { Shopify } from "sveltekit-shopify-api"
 import { verifyRequest } from "sveltekit-shopify-auth"
 
 export async function verify (config: AuthConfig, event: RequestEvent) {
@@ -12,7 +12,7 @@ export async function verify (config: AuthConfig, event: RequestEvent) {
     return response
   }
 
-  const session = await loadCurrentSession(config, event)
+  const session = await Shopify.Utils.loadCurrentSession(config, event)
   if (session) {
     event.locals.session = session
     event.locals.shop = await prisma.shop.findUnique({
