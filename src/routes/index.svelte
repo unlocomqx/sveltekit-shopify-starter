@@ -55,7 +55,7 @@
     to your new<br/>SvelteKit app
   </h1>
 
-  <p>Congrats! Your app works 🎉</p>
+  <h2>Congrats! Your app works 🎉</h2>
 
   <ul>
     <li>The current shop is <strong>{shop.name}</strong></li>
@@ -76,7 +76,7 @@
 
   {#if infosPromise}
     {#await infosPromise}
-      Fetching infos...
+      <p>Fetching infos...</p>
     {:then {session, shop}}
       <!-- ⚠️ For demo purposes only -->
       <p>
@@ -91,7 +91,7 @@
 
   {#if productsPromise}
     {#await productsPromise}
-      Fetching products...
+      <p>Fetching products...</p>
     {:then {products}}
       <ul>
         {#if products.edges.length}
