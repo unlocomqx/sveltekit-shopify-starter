@@ -31,6 +31,6 @@
     "prisma": "^3.11.1",
     "svelte-apollo-client": "^0.1.4",
     "sveltekit-shopify-api": "^1.3.7",
-    "sveltekit-shopify-auth": "^1.4.5"
+    "sveltekit-shopify-auth": "^1.5.2"
   }
 }
