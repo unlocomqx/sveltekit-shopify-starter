@@ -11,7 +11,7 @@
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/adapter-node": "^1.0.0-next.73",
     "@sveltejs/kit": "next",
     "shopify-admin-api-typings": "^1.2.2",
     "svelte": "^3.44.0",
