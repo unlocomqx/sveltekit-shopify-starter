@@ -3,9 +3,9 @@
   import { page } from "$app/stores"
   import Header from "$lib/components/header/Header.svelte"
   import { initAppBridge } from "$lib/shopify/app-bridge"
+  import { authenticatedFetch } from "$lib/shopify/fetch"
   import { onMount } from "svelte"
   import "../app.css"
-  import { authenticatedFetch } from "../lib/shopify/fetch"
 
   // The App Bridge can only work when the app is embedded in Shopify Admin
   // The page will redirect to Shopify Admin when not embedded
