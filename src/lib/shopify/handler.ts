@@ -10,18 +10,8 @@ export async function handleShopifyAuth (event: RequestEvent) {
   const { url } = event
   const shop = url.searchParams.get("shop")
 
-  if (!shop) {
-    return new Response("<p>Shop parameter not defined, please open the app from Shopify Admin</p>", {
-      status    : 400,
-      statusText: "Bad Request",
-      headers   : {
-        "content-type": "text/html;charset=UTF-8",
-      },
-    })
-  }
-
   if (url.pathname === "/") {
-    const savedShop = await getShopByName(shop)
+    const savedShop = shop && await getShopByName(shop)
     if (!savedShop) {
       return new Response(null, {
         status : 301,
