@@ -16,11 +16,8 @@
     initAppBridge(query.get("shop"), query.get("host"))
   }
 
-  onMount(async () => {
-    let fetchFn = authenticatedFetch()
-    // Will redirect the app to get a new token if the current session is invalid
-    await fetchFn("/refresh-shopify-token")
-  })
+  // Will redirect the app to get a new token if the current session is invalid
+  onMount(() => authenticatedFetch()("/refresh-shopify-token"))
 </script>
 
 {#if redirect}
