@@ -10,6 +10,11 @@ const config = {
   kit: {
     adapter: adapter(),
 
+    prerender: {
+      default: false,
+      enabled: false,
+    },
+
     vite: {
       server: {
         hmr: {
