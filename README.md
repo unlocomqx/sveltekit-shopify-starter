@@ -4,7 +4,7 @@ A Shopify Starter app based On SvelteKit
 
 ![Shopify starter app](./media/screenshot.png)
 
-With concise handling code
+With concise auth handling code
 
 ![Code sample](./media/code-sample.png)
 
