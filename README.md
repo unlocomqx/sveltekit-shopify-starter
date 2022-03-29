@@ -2,6 +2,8 @@
 
 A Shopify Starter app based On SvelteKit
 
+![Shopify starter app](./media/screenshot.png)
+
 ## Contents
 
 - Shopify Auth handler (Provided
@@ -108,19 +110,20 @@ const data = await query<{ product: Product }>(_query, {
 
 ## Usage with SvelteKit Vercel Adapter
 
-Prisma needs a post install and postbuild for Vercel, and a the build command for vercel needs to be set to prisma generate && npm run build
+Prisma needs a post install and postbuild for Vercel, and a the build command for vercel needs to be
+set to prisma generate && npm run build
 
 ```json
 "scripts":{
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
-    "package": "svelte-kit package",
-    "preview": "svelte-kit preview",
-    "prepare": "svelte-kit sync",
-    "check": "svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-    "postinstall": "prisma generate",
-    "postbuild": "cp node_modules/@prisma/engines/*query* .vercel_build_output/functions/node/render/;cp prisma/schema.prisma .vercel_build_output/functions/node/render/",
-    "vercel-build": "prisma generate && npm run build"
+"dev": "svelte-kit dev",
+"build": "svelte-kit build",
+"package": "svelte-kit package",
+"preview": "svelte-kit preview",
+"prepare": "svelte-kit sync",
+"check": "svelte-check --tsconfig ./tsconfig.json",
+"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+"postinstall": "prisma generate",
+"postbuild": "cp node_modules/@prisma/engines/*query* .vercel_build_output/functions/node/render/;cp prisma/schema.prisma .vercel_build_output/functions/node/render/",
+"vercel-build": "prisma generate && npm run build"
 }
 ```
