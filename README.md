@@ -114,7 +114,7 @@ const data = await query<{ product: Product }>(_query, {
 
 ## Usage with SvelteKit Vercel Adapter
 
-Prisma needs a post install and postbuild for Vercel, and a the build command for vercel needs to be
+Prisma needs a post install and postbuild for Vercel, and the build command for vercel needs to be
 set to prisma generate && npm run build
 
 ```json
