@@ -14,7 +14,7 @@ export async function handleShopifyAuth (event: RequestEvent) {
     const savedShop = shop && await getShopByName(shop)
     if (!savedShop) {
       return new Response(null, {
-        status : 301,
+        status : 302,
         headers: {
           location: `/auth?shop=${ shop }`,
         },
