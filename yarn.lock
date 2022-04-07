@@ -1105,10 +1105,10 @@ sveltekit-shopify-api@^1.3.7:
     tslib "^2.0.3"
     uuid "^8.3.1"
 
-sveltekit-shopify-auth@^1.6.1:
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/sveltekit-shopify-auth/-/sveltekit-shopify-auth-1.6.1.tgz#f1c3f6d3ef825773e75832e9097f08043b57436e"
-  integrity sha512-wfCd89jn33O2c6ufIKXmdlLJ0k8Fp2m4lEroFPNa3Aib659LnhFWsfMIdQzHP7X0YrmTyFgCtyy9acxX4y5itw==
+sveltekit-shopify-auth@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/sveltekit-shopify-auth/-/sveltekit-shopify-auth-1.6.2.tgz#175aee66d947f05fad7cd868c88eb1430116b0e8"
+  integrity sha512-dskzj43FJ9AZBLEqdlKRzt0zDzer897j62oAw7XzzIZgqzyJyHadOcF85dwUgRm6NYNOCWbVxXx9pZp+vSJTmg==
   dependencies:
     cookie "^0.4.2"
     sveltekit-shopify-api "^1.3.7"
