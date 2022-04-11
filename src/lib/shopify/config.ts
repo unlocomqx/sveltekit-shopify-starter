@@ -37,19 +37,6 @@ export const config = {
       create: shopData,
     })
 
-    const webhooks = {
-      "APP_UNINSTALLED": processAppUninstalled,
-      "PRODUCTS_UPDATE": processProductUpdated,
-      "PRODUCTS_DELETE": processProductDeleted,
-    }
-
-    Object.entries(webhooks).forEach(([webhook, handler]) => {
-      Shopify.Webhooks.Registry.addHandler(webhook, {
-        path          : "/webhooks",
-        webhookHandler: handler,
-      })
-    })
-
     const responses: RegisterReturn[] = await Promise.all(Object.keys(webhooks).map(webhook => Shopify.Webhooks.Registry.register(config, {
       shop,
       accessToken,
@@ -75,3 +62,16 @@ export const config = {
     })
   },
 }
+
+const webhooks = {
+  "APP_UNINSTALLED": processAppUninstalled,
+  "PRODUCTS_UPDATE": processProductUpdated,
+  "PRODUCTS_DELETE": processProductDeleted,
+}
+
+Object.entries(webhooks).forEach(([webhook, handler]) => {
+  Shopify.Webhooks.Registry.addHandler(webhook, {
+    path          : "/webhooks",
+    webhookHandler: handler,
+  })
+})
